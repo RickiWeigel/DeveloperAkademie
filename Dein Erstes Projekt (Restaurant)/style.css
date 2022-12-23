@@ -1,10 +1,7 @@
-html{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
   margin: 0;
   background-color: #d6cfcb;
+  font-family: Calibri;
 }
 
 .header {
