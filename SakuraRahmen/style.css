@@ -1,0 +1,70 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+}
+
+.bg1 {
+    background-image: url(./img/bgr1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    padding-top: 25px;
+    justify-content: space-around;
+}
+
+.saku-logo {
+    background-image: url(./img/saku.png);
+    height: 48px;
+    width: 50px;
+}
+
+.nav ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    height: 20px;
+}
+
+.menu {
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.phone-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #5d1111;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+#phone {
+    height: 25px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
