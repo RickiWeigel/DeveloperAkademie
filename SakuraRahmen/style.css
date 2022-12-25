@@ -23,7 +23,7 @@ body {
     justify-content: space-around;
 }
 
-.saku-logo {
+.sakuLogo {
     background-image: url(./img/saku.png);
     height: 48px;
     width: 50px;
@@ -60,7 +60,7 @@ body {
     text-decoration: none;
 }
 
-.phone-button {
+.phoneButton {
     display: flex;
     align-items: center;
     color: white;
@@ -70,7 +70,7 @@ body {
     border: 1px solid white;
 }
 
-.phone-button:hover{
+.phoneButton:hover{
     background-color: #a02d2d;
 }
 
@@ -91,6 +91,7 @@ h1{
     padding-top: 150px;
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 .container2{
@@ -98,15 +99,15 @@ h1{
     justify-content: center;
     color: white;
 }
-.bg2{
-    font-family: 'Economica', sans-serif;
-    font-weight: bold;
-}
 
 .howOrder{
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
     display: flex;
     justify-content: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #a4050a;
 }
 
 h2{
@@ -115,7 +116,8 @@ h2{
     color: #a4050a;
 }
 
-.icon-menu{
+.iconOrder{
+    font-family: 'Economica', sans-serif;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 150px;
@@ -127,4 +129,82 @@ h2{
     flex-direction: column;
     text-align: center;
     font-size: 24px;
+    font-weight: bold;
 }
+
+.bg3{
+    background-image: url(./img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 70px;
+}
+
+.ourMenu{    
+    display: flex;
+    justify-content: center;
+}
+
+.ourMenu p{
+    font-family: 'Economica', sans-serif;
+    color: #a4050a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 57px;
+}
+
+.menu{
+    display: flex;
+    justify-content:space-evenly;
+    padding-bottom: 70px;
+}
+
+
+.menucontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+table{
+    width: 350px;
+}
+
+th{
+    font-family: 'Economica', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    padding-bottom: 20px;
+    text-align: start;
+}
+
+td{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: grey;
+}
+
+.menu1{
+    display: flex;
+    justify-content:space-evenly;
+    padding-bottom: 30px;
+}
+
+.menu1 img{
+    width: 250px;
+}
+
+.menu2{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row-reverse;
+    padding-bottom: 30px;
+}
+
+.menu2 img{
+    width: 250px;
+}
+
+
