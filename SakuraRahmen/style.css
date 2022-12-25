@@ -140,12 +140,9 @@ h2 {
     padding-bottom: 70px;
 }
 
-.ourMenu {
+.titleClass {
     display: flex;
     justify-content: center;
-}
-
-#ourMenuTitle {
     font-family: 'Economica', sans-serif;
     color: #a4050a;
     font-weight: bold;
@@ -182,7 +179,7 @@ th {
 td {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     color: grey;
 }
 
@@ -208,5 +205,32 @@ td {
 }
 
 .bg4{
-    height: 110vh;
+    padding-bottom: 50px;
+}
+
+#titleFindUs{
+    font-family: 'Raleway', sans-serif;
+    color: #a4050a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 57px;
+    margin: 0;
+}
+
+.address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.address img{
+    width: 18px;
+    padding-right: 5px;
+}
+
+iframe{
+    margin-top: 30px;
 }
