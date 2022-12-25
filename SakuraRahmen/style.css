@@ -4,11 +4,10 @@ html {
 
 body {
     margin: 0;
-    font-family: "Raleway", sans-serif;
-
 }
 
 .bg1 {
+    font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     background-image: url(./img/bgr1.jpg);
     height: 100vh;
@@ -85,6 +84,7 @@ h1{
     color: white;
     font-size: 70px;
     margin: 0;
+    font-weight: bold;
 }
 
 .container1{
@@ -98,18 +98,18 @@ h1{
     justify-content: center;
     color: white;
 }
-
 .bg2{
-    font-family: 'Economica', sans-serif !important; 
+    font-family: 'Economica', sans-serif;
     font-weight: bold;
 }
 
 .howOrder{
+    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
 }
 
-h2 {
+h2{
     text-transform: uppercase;
     font-size: 50px;
     color: #a4050a;
