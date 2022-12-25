@@ -204,11 +204,8 @@ td {
     width: 250px;
 }
 
-.bg4{
-    padding-bottom: 50px;
-}
 
-#titleFindUs{
+#titleFindUs {
     font-family: 'Raleway', sans-serif;
     color: #a4050a;
     font-weight: bold;
@@ -218,7 +215,7 @@ td {
     margin: 0;
 }
 
-.address{
+.address {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,11 +223,25 @@ td {
     font-family: 'Raleway', sans-serif;
 }
 
-.address img{
+.address img {
     width: 18px;
     padding-right: 5px;
 }
 
-iframe{
+iframe {
     margin-top: 30px;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
 }
