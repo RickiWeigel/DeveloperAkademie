@@ -233,15 +233,15 @@ iframe {
 }
 
 footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.socialMedia {
+.socialMediaIcon {
     display: flex;
     justify-content: space-evenly;
-    width: 300px;
+    width: 350px;
 }
