@@ -49,12 +49,13 @@ body {
     text-decoration: none;
     border-bottom: 4px solid transparent;
     transition: all 225ms ease-in-out;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .headerNav a:hover {
     border-bottom: 4px solid white;
     transition: all 225ms ease-in-out;
-    /*Animation für Menü*/
 }
 
 .applyBtn {
@@ -68,4 +69,28 @@ body {
 
 .applyBtn:hover {
     background-color: rgb(252, 162, 65);
+}
+
+.profilePicture {
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.founders {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.headlineSection {
+    display: flex;
+    justify-content: center;
+}
+
+.textCenter{
+    text-align: center;
 }
