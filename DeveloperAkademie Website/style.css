@@ -91,6 +91,20 @@ body {
     justify-content: center;
 }
 
-.textCenter{
+.textCenter {
     text-align: center;
+}
+
+.textGray {
+    color: #777777;
+}
+
+.founderBox {
+    margin-left: 16px;
+    margin-right: 16px;
+    max-width: 200px;
+}
+
+.bg1{
+    background-color: #dfdede;
 }
