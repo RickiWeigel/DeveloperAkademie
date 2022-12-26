@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,15 +110,15 @@ body {
     max-width: 220px;
 }
 
-.bg1{
+.bg1 {
     background-color: #f9f9f9;
 }
 
-.bg2{
+.bg2 {
     background-color: #f1f1f1;
 }
 
-.explainPicture{
+.explainPicture {
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -123,8 +127,76 @@ body {
     margin-right: 32px;
 }
 
-.explainSection{
+.explainSection {
     padding: 16px;
     display: flex;
     justify-content: center;
+}
+
+.explainContainerElement {
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bgGray{
+    background-color: rgb(228 216 202);
+}
+
+footer{
+    display: flex;
+    background-color: #545454;
+    justify-content: space-between;
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 16px;
+    min-width: 300px;
+}
+
+.footerContainer img{
+ object-fit: contain;
+ height: 90px;
+}
+
+.footerContainer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footerContainer a:hover{
+    text-decoration: underline;
+}
+
+.readMore{
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.readMore img{
+    width: 45px;
+    object-fit: contain;
+}
+
+.applySection{
+    min-height: 300px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.applyBtnMargin{
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
