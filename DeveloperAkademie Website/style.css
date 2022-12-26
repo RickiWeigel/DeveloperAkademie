@@ -102,9 +102,28 @@ body {
 .founderBox {
     margin-left: 16px;
     margin-right: 16px;
-    max-width: 200px;
+    max-width: 220px;
 }
 
 .bg1{
-    background-color: #dfdede;
+    background-color: #f9f9f9;
+}
+
+.bg2{
+    background-color: #f1f1f1;
+}
+
+.explainPicture{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.explainSection{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
 }
