@@ -1,12 +1,26 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: "Calibri";
 }
 
 .headerImage{
     height: 100vh;
     width: 100%;
     object-fit: cover;
+}
+
+.headerContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .navBar{
@@ -19,7 +33,26 @@ body{
     padding: 16px;
 }
 
+.headerLogo{
+    width: 170px;
+}
+
 .headerNav{
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: white;
 }
+
+.headerNav a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    transition: all 225ms ease-in-out;
+}
+
+.headerNav a:hover{
+    border-bottom: 4px solid white;
+    transition: all 225ms ease-in-out; /*Animation für Menü*/
+}
+
