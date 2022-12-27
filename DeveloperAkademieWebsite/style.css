@@ -200,3 +200,13 @@ footer{
     margin-top: 20px;
     margin-bottom: 12px;
 }
+
+@media(max-width:1000px){
+    h1{
+        font-size: 32px !important;
+        text-align: center;
+    }
+   p{
+    text-align: center;
+   }
+}

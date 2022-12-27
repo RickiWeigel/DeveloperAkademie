@@ -13,13 +13,21 @@ body {
     height: 100vh;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
-    height: 50px;
+    position:absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
     display: flex;
-    padding-top: 40px;
     justify-content: space-around;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    height: 50px;
 }
 
 .sakuLogo {
@@ -87,10 +95,10 @@ h1 {
 }
 
 .container1 {
-    padding-top: 150px;
-    display: flex;
     justify-content: center;
     text-transform: uppercase;
+    color: white;
+    text-align: center;
 }
 
 .container2 {
@@ -119,7 +127,7 @@ h2 {
     font-family: 'Economica', sans-serif;
     display: flex;
     justify-content: space-evenly;
-    /* padding-bottom: 150px; */
+    padding-bottom: 30px;
 }
 
 .icon {
@@ -135,7 +143,6 @@ h2 {
     background-image: url(./img/background.jpg);
     background-position: center;
     background-size: cover;
-    padding-bottom: 70px;
 }
 
 .titleClass {
