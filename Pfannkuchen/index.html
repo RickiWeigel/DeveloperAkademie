@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pfannkuchen</title>
+    <title>Pfannkuchen </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
+
+
 <body>
+    <h1>Rezept für Pfannkuchen</h1>
 
+    <table id="table">
+        <tr>
+            <td>Menge</td>
+            <td>Name</td>
+        </tr>
+    </table>
 
-    
+    <script>
+        function addAll() {
+            addIngredient('2', 'Eier');
+            addIngredient('200g', 'Milch');
+            addIngredient('200g', 'Mehl');
+            addIngredient('1 Prise', 'Salz');
+        }
+
+        function addIngredient(menge, name) {
+            document.getElementById('table').innerHTML += `
+                <tr>
+                <td>${menge}</td>
+                <td>${name}</td>
+                </tr>
+            `;
+        }
+
+        addAll();
+    </script>
 </body>
+
 </html>
