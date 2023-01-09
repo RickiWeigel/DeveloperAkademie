@@ -16,11 +16,11 @@ if (text.length > 0 && name.length > 0) {
         newName.innerHTML = "";
         newPosts.innerHTML = ""; //leert alle vorher eingegebenen nachrichtens
     for (let i = 0; i < posts.length; i++) { //zeigt alle im Array (post) gespeicherten Nachrichten
-        newPosts.innerHTML += `
-        <div class="post">
-        <b>${names[i]}</b><br>
-        ${posts[i]}
-        </div>
+        newPosts.innerHTML +=html`
+            <div class="post">
+            <b>${names[i]}</b><br>
+            ${posts[i]}
+            </div>
         `;
     }
     document.getElementById("messageInput").value=''; //leert das Inputfeld
