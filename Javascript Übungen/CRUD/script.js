@@ -30,6 +30,7 @@ function render() {
     }
 }
 
+
 function addContact(){
     let name = document.getElementById('name');
     let phoneNumber = document.getElementById('phone');
@@ -39,12 +40,14 @@ function addContact(){
     save();
 }
 
+
 function deleteContact(i){
     names.splice(i, 1);
     phoneNumbers.splice(i, 1);
     render();
     save();
 }
+
 
 function save(){
     let namesAsText = JSON.stringify(names);
@@ -54,6 +57,7 @@ function save(){
     localStorage.setItem('phoneNumbers', phoneNumbersAsText);
 }
 
+
 function load(){
     let namesAsText = localStorage.getItem('names');
     let phoneNumbersAsText = localStorage.getItem('phoneNumbers');
@@ -62,5 +66,4 @@ function load(){
         names = JSON.parse(namesAsText);
         phoneNumbers = JSON.parse(phoneNumbersAsText);
     }
-
 }
