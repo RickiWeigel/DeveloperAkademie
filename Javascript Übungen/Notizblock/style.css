@@ -91,6 +91,9 @@ textarea {
 }
 
 .notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #B2CF61;
     background-color: #DBF29B !important;
     margin-left: 16px;
@@ -99,7 +102,7 @@ textarea {
     padding: 16px;
     min-width: 25vw;
     max-width: 25vw;
-    height: 180px;
+    height: auto;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: #6ca299 0px 0px 5px 3px;
@@ -112,7 +115,7 @@ textarea {
     padding-left: 8px;
     padding-bottom: 8px;
     font-size: 24px;
-    width: 25vw;
+    width: 95%;
     height: 24px;
     border-bottom: 2px solid #60847E;
 }
