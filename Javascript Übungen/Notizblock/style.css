@@ -48,10 +48,6 @@ header{
     box-shadow: #6ca299 0px 0px 5px 3px;;
 }
 
-.note-input{
-    display: flex;
-    justify-content: center;
-}
 
 input{
     font-family: 'Caveat', cursive;
@@ -65,14 +61,17 @@ input{
     margin: 8px;
     outline: none;
     font-size: 30px;
+    padding: 8px;
 }
 
 textarea{
     font-family: 'Caveat', cursive;
     min-width: 35vw;
+    min-height: 100px;
     max-width: 35vw;
     background-color: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 24px;
     outline: none;
+    overflow:hidden;
 }
