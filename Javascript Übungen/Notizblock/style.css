@@ -1,0 +1,78 @@
+body{
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    background-color: #446E67;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img{
+    width: 80px;
+    height: auto;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #60847E;
+    box-shadow: #6CA299 0 2px 5px;
+}
+
+.new-note-section{
+    margin-top: 32px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-note{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 38vw;
+    background-color: rgb(255, 255, 255, 0.5) ;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: #6ca299 0px 0px 5px 3px;;
+}
+
+.note-input{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    font-family: 'Caveat', cursive;
+    border-bottom: 2px solid #60847E;
+    background-color: transparent;
+    height: 24px;
+    width: 35vw;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 8px;
+    outline: none;
+    font-size: 30px;
+}
+
+textarea{
+    font-family: 'Caveat', cursive;
+    min-width: 35vw;
+    max-width: 35vw;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    outline: none;
+}
