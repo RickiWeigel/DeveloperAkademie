@@ -1,26 +1,26 @@
-body{
+body {
     font-family: 'Caveat', cursive;
     margin: 0;
-    background-color: #446E67;
+    background-color: #B2CF61;
 }
 
-.header-logo{
+.header-logo {
     display: flex;
     align-items: center;
 }
 
-.header-logo img{
+.header-logo img {
     width: 80px;
     height: auto;
 }
 
-h1{
+h1 {
     font-size: 64px;
     font-weight: bold;
     color: #ffffff;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ header{
     box-shadow: #6CA299 0 2px 5px;
 }
 
-.new-note-section{
+.new-note-section {
     margin-top: 32px;
     width: 100vw;
     display: flex;
@@ -36,20 +36,22 @@ header{
     align-items: center;
 }
 
-.new-note{
+.new-note {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 38vw;
-    background-color: rgb(255, 255, 255, 0.5) ;
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 8px;
     border-radius: 16px;
-    box-shadow: #6ca299 0px 0px 5px 3px;;
+    box-shadow: #6ca299 0px 0px 5px 3px;
 }
 
 
-input{
+input {
+    color: #60847E;
+    font-weight: bold;
     font-family: 'Caveat', cursive;
     border-bottom: 2px solid #60847E;
     background-color: transparent;
@@ -61,10 +63,13 @@ input{
     margin: 8px;
     outline: none;
     font-size: 30px;
-    padding: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
 }
 
-textarea{
+textarea {
+    color: #60847E;
     font-family: 'Caveat', cursive;
     min-width: 35vw;
     min-height: 100px;
@@ -73,5 +78,47 @@ textarea{
     border: none;
     font-size: 24px;
     outline: none;
-    overflow:hidden;
+    overflow: hidden;
+}
+
+.notes-section {
+    margin-top: 32px;
+    width: 100vw;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.notes {
+    color: #B2CF61;
+    background-color: #DBF29B !important;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+    padding: 16px;
+    min-width: 25vw;
+    max-width: 25vw;
+    height: 180px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: #6ca299 0px 0px 5px 3px;
+}
+
+.notes-title {
+    color: #476102;
+    font-weight: bold;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    font-size: 24px;
+    width: 25vw;
+    height: 24px;
+    border-bottom: 2px solid #60847E;
+}
+
+.notes-text {
+    padding-top: 8px;
+    font-size: 20px;
+    color: #476102;
 }
