@@ -33,11 +33,28 @@ function addNote(){
     document.getElementById('title-input').value = '';
     document.getElementById('text-input').value = '';
     render();
+    save()
 }
 
 function deleteNote(i){
     titles.splice(i, 1);
     notes.splice(i, 1);
     render();
+    save()
 }
 
+function save(){
+    let titlesAsText = JSON.stringify(titles);
+    let notesAsText = JSON.stringify(notes);
+
+    localStorage.setItem('titles', titlesAsText)
+    localStorage.setItem('notes', notesAsText);
+}
+
+
+function load(){
+    let titlesAsText = localStorage.getItem('titles');
+    let notesAsText = localStorage.getItem('notes');
+
+    
+}
