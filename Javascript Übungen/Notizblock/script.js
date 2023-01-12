@@ -8,8 +8,8 @@ function render(){
     for (let i = 0; i < titles.length; i++) {
             note.innerHTML +=`
         <div class="notes">
-            <div class="notes-title">${titles[i]}</div>
-            <div class="notes-text">${notes[i]}</div>
+            <div class="notes-title"><span>${titles[i]}</span></div>
+            <div class="notes-text"><span>${notes[i]}</span></div>
             <div class="notes-footer">
                 <img src="./img/bearbeitung.png">
                 <img onclick="deleteNote()" src="./img/mulleimer.png" >
@@ -20,11 +20,16 @@ function render(){
 }
 
 function addNote(){
-    let title = document.getElementById('title-input');
-    let text = document.getElementById('text-input');
+    let title = document.getElementById('title-input').value;
+    let text = document.getElementById('text-input').value;
 
-    titles.push(title.value);
-    notes.push(text.value);
+    if(title.length && text.length){
+        titles.push(title);
+        notes.push(text);
+    }else{
+        alert('Fülle alle Felder ein!')
+    }
+
     render();
 }
 
