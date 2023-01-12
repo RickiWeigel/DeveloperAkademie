@@ -16,7 +16,7 @@
     <title>Notizblock</title>
 </head>
 
-<body>
+<body onload="render()">
     <header>
         <div class="header-logo">
             <img src="./img/schreiben.png">
@@ -30,23 +30,13 @@
                 <input id="title-input" type="text" placeholder="Title">
             </div>
             <textarea id="" placeholder="your notes" cols="30" rows="5"></textarea>
+            <div class="input-footer">
+                <img src="./img/speichern.png">
+            </div>
         </div>
     </div>
 
-    <div class="notes-section">
-        <div class="notes">
-            <div class="notes-title">Placeholder Title</div>
-            <div class="notes-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium deserunt dolor
-                veritatis! Porro distinctio aliquam commodi, soluta, quisquam veritatis, illo veniam ipsa nostrum nemo
-                voluptatem odit accusamus vitae facere explicabo. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Alias modi fugit enim magni odit, explicabo sint ut perspiciatis temporibus qui maxime.
-                Necessitatibus dolorem ipsum quibusdam deserunt molestias error cum nesciunt?</div>
-
-            <div class="notes-footer">
-                <img src="./img/bearbeitung.png">
-                <img src="./img/mulleimer.png">
-            </div>
-        </div>
+    <div id="notes-section" class="notes-section">
     </div>
 
 </body>

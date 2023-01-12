@@ -68,6 +68,20 @@ input {
     padding-bottom: 8px;
 }
 
+.input-footer{
+    border-top: 2px solid #60847E;
+    padding-right: 16px;
+    padding: 8px;
+    width: 93%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input-footer img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 textarea {
     color: #60847E;
     font-family: 'Caveat', cursive;
@@ -79,6 +93,7 @@ textarea {
     font-size: 24px;
     outline: none;
     overflow: hidden;
+    margin-bottom: 8px;
 }
 
 .notes-section {
@@ -141,4 +156,5 @@ textarea {
 
 .notes-footer img:hover{
     opacity: 0.5;
+    cursor: pointer;
 }
