@@ -1,22 +1,36 @@
-let title = [];
-let note = [];
+let titles = [];
+let notes = [];
 
 function render(){
     let note = document.getElementById('notes-section');
     note.innerHTML = '';
-    note.innerHTML =`
-        <div class="notes">
-            <div class="notes-title">Placeholder Title</div>
-            <div class="notes-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium deserunt dolor
-                veritatis! Porro distinctio aliquam commodi, soluta, quisquam veritatis, illo veniam ipsa nostrum nemo
-                voluptatem odit accusamus vitae facere explicabo. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Alias modi fugit enim magni odit, explicabo sint ut perspiciatis temporibus qui maxime.
-                Necessitatibus dolorem ipsum quibusdam deserunt molestias error cum nesciunt?</div>
 
+    for (let i = 0; i < titles.length; i++) {
+            note.innerHTML +=`
+        <div class="notes">
+            <div class="notes-title">${titles[i]}</div>
+            <div class="notes-text">${notes[i]}</div>
             <div class="notes-footer">
                 <img src="./img/bearbeitung.png">
-                <img src="./img/mulleimer.png">
+                <img onclick="deleteNote()" src="./img/mulleimer.png" >
             </div>
         </div>
     `;
+    }
 }
+
+function addNote(){
+    let title = document.getElementById('title-input');
+    let text = document.getElementById('text-input');
+
+    titles.push(title.value);
+    notes.push(text.value);
+    render();
+}
+
+function deleteNote(i){
+    titles.splice(i, 1);
+    notes.splice(i, 1);
+    render();
+}
+
