@@ -6,7 +6,7 @@ function render(){
     note.innerHTML = '';
 
     for (let i = 0; i < titles.length; i++) {
-            note.innerHTML +=`
+        note.innerHTML +=`
         <div class="notes">
             <div class="notes-title"><span>${titles[i]}</span></div>
             <div class="notes-text"><span>${notes[i]}</span></div>
@@ -29,7 +29,8 @@ function addNote(){
     }else{
         alert('Fülle alle Felder ein!')
     }
-
+    document.getElementById('title-input').value = '';
+    document.getElementById('text-input').value = '';
     render();
 }
 
