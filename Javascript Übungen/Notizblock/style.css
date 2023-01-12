@@ -95,7 +95,7 @@ textarea {
     flex-direction: column;
     align-items: center;
     color: #B2CF61;
-    background-color: #DBF29B !important;
+    background-color: #DBF29B;
     margin-left: 16px;
     margin-right: 16px;
     margin-bottom: 32px;
@@ -103,7 +103,6 @@ textarea {
     min-width: 25vw;
     max-width: 25vw;
     height: auto;
-    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: #6ca299 0px 0px 5px 3px;
 }
@@ -124,4 +123,22 @@ textarea {
     padding-top: 8px;
     font-size: 20px;
     color: #476102;
+}
+
+.notes-footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid #60847E;
+    margin-top: 8px;
+}
+
+.notes-footer img{
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+}
+
+.notes-footer img:hover{
+    opacity: 0.5;
 }
