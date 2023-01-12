@@ -12,7 +12,7 @@ function render(){
             <div class="notes-text"><span>${notes[i]}</span></div>
             <div class="notes-footer">
                 <img src="./img/bearbeitung.png">
-                <img onclick="deleteNote()" src="./img/mulleimer.png" >
+                <img onclick="deleteNote(${i})" src="./img/mulleimer.png" >
             </div>
         </div>
     `;
