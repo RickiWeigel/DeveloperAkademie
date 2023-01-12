@@ -22,6 +22,7 @@ function render(){
 function addNote(){
     let title = document.getElementById('title-input').value;
     let text = document.getElementById('text-input').value;
+    text = text.replace(/\r?\n/g, '<br />'); //logt die zeilenumbrüche auch mit ein
 
     if(title.length && text.length){
         titles.push(title);
