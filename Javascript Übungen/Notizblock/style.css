@@ -37,30 +37,47 @@ header {
 }
 
 .new-note {
+    min-height: 100px;
+    width: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 38vw;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: #d2f081;
     padding: 8px;
     border-radius: 16px;
     box-shadow: #6ca299 0px 0px 5px 3px;
 }
 
+.note-input{
+    max-width: 300px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #60847E;
+}
+
+.note-input img{
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.note-input img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
 
 input {
+    max-width: 300px;
     color: #60847E;
     font-weight: bold;
-    font-family: 'Caveat', cursive;
-    border-bottom: 2px solid #60847E;
+    font-family: 'Caveat', cursive;    
     background-color: transparent;
     height: 24px;
-    width: 35vw;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    margin: 8px;
+    width: 100%;
+    border: none;
     outline: none;
     font-size: 30px;
     padding-right: 8px;
@@ -85,15 +102,16 @@ input {
 textarea {
     color: #60847E;
     font-family: 'Caveat', cursive;
-    min-width: 35vw;
+    min-width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
     min-height: 100px;
-    max-width: 35vw;
     background-color: transparent;
     border: none;
     font-size: 24px;
     outline: none;
     overflow: hidden;
     margin-bottom: 8px;
+    padding-left: 8px;
 }
 
 .notes-section {
@@ -116,8 +134,7 @@ textarea {
     margin-right: 16px;
     margin-bottom: 32px;
     padding: 16px;
-    min-width: 25vw;
-    max-width: 25vw;
+    width: 200px;
     min-height: 200px;
     height: auto;
     border-radius: 10px;
@@ -162,4 +179,21 @@ textarea {
 .notes-footer img:hover{
     opacity: 0.5;
     cursor: pointer;
+}
+
+.edit-bg{
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none{
+    display: none;
 }
