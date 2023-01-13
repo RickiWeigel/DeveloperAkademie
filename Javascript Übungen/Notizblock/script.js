@@ -64,6 +64,20 @@ function load(){
 
 
 function openEdit (i){
+    let editNote = document.getElementById('edit-bg');
+    editNote.innerHTML = `
+    <div class="new-note">
+        <div class="note-input">
+        <input id="edit-title-input" type="text" placeholder="Title">
+        <img onclick="closeEdit()" src="./img/kreuz.png">
+        </div>
+            <textarea id="edit-text-input" placeholder="your notes" cols="30" rows="4"></textarea>
+        <div class="input-footer">
+            <img onclick="edit(${i})" src="./img/speichern.png">
+        </div>
+    </div>
+    `;
+
     notes[i] = notes[i].replace(/<br\s*\/?>/g, '\r\n');
     document.getElementById('edit-bg').classList.remove('d-none');
     document.getElementById('edit-title-input').value = titles[i];
