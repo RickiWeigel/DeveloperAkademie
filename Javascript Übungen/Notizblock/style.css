@@ -30,7 +30,6 @@ header {
 
 .new-note-section {
     margin-top: 32px;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +115,6 @@ textarea {
 
 .notes-section {
     margin-top: 32px;
-    width: 100vw;
     min-height: 200px;
     display: flex;
     justify-content: center;
