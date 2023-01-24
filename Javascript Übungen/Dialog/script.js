@@ -3,5 +3,5 @@ function openDialog (){
 }
 
 function closeDialog(){
-    document.getElementById('bg').classList.add('d-none')
+    document.getElementById('max-image-container').classList.add('d-none')
 }

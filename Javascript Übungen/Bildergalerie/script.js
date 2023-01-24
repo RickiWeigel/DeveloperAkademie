@@ -6,11 +6,36 @@ function render(){
 
     for (let i = 0; i < images.length; i++) {
         image.innerHTML += `
-        <div id="pics" class="pics">
+        <div onclick="showImage(${i})" id="pics" class="pics">
         <img src="${images[i]}">
         </div>
         `
     }
 };
 
+
+function renderMaxImage(i){
+    let image = document.getElementById('max-image-container');
+    image.innerHTML = '';
+    image.innerHTML = `
+        <div onclick="closeImage ()" class="close-btn"></div>
+        <img class="max-image" src="${images[i]}">
+    `
+}
+
+
+function showImage (i){
+    document.getElementById('max-image-container').classList.remove('d-none')
+    let image = document.getElementById('max-image-container');
+    image.innerHTML = '';
+    image.innerHTML = `
+        <div onclick="closeImage ()" class="close-btn">X</div>
+        <img class="max-image" src="${images[i]}">
+    `
+}
+
+
+function closeImage (){
+    document.getElementById('max-image-container').classList.add('d-none')
+}
 

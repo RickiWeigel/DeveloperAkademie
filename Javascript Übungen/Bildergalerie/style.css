@@ -24,6 +24,8 @@ body{
 }
 
 .pics { 
+    width: 184px;
+    height: 184px;
     margin: 4px;
     display: flex;
     justify-content: center;
@@ -40,12 +42,12 @@ body{
 .pics img:hover{
     cursor: pointer;
     opacity: 0.8;
-    width: 182px;
-    height: 182px;
+    width: 184px;
+    height: 184px;
 }
 
 .d-none{
-    display: none;
+    display: none !important;
 }
 
 .max-image-container{
@@ -68,4 +70,14 @@ body{
     object-fit: contain;
     border-radius: 6px;
     box-shadow: 0px 0px 18px 3px rgb(84 84 84);
+}
+
+.close-btn{
+    font-size: 32px;
+    color: grey;
+}
+
+.close-btn:hover{
+    color: lightgrey;
+    cursor: pointer;
 }
