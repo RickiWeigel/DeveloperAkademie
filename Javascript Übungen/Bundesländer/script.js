@@ -129,11 +129,18 @@ function render() {
         </div>            
         `;
 
-        let landcontent = document.getElementById(`landcontent${i}`);
+        const landcontent = document.getElementById(`landcontent${i}`);
 
-        for (let j = 0; j < land["comments"].length; j++) {
-            const comment = land["comments"][j];
+        for (let j = 0; j < land['comments'].length; j++) {
+            const comment = land['comments'][j];
             landcontent.innerHTML += `<div>${comment}</div>`;
         }
     }
+};
+
+function addComment(index) {
+    let input = document.getElementById(`input${index}`);
+    bundeslaender[index]['comments'].push(input.value),
+    input.velue = '';
+    render();
 }
