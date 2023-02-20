@@ -126,7 +126,7 @@ function render() {
 
             <div id="landcontent${i}"></div>
             <input id="input${i}"><button onclick="addComment(${i})">OK</button>
-        </div>            
+        </div>
         `;
 
         let landcontent = document.getElementById(`landcontent${i}`);
