@@ -11,3 +11,45 @@ async function includeHTML() {
         }
     }
 }
+
+
+// Lieferando Challange
+
+let menus = ["Pizza Salami","Pizza Hawai", "Pizza Schinken"];
+let prices = [7.20,7.50,7.90];
+let amounts = [1,2,3];
+
+function getValueFromInput(inputId){
+  let input = document.getElementById(inputId);
+  return input.value;
+}
+
+function getMenuFromInput() {
+  let menuInput = getValueFromInput('menu');
+  let menuTrim = menuInput.trim();
+  if (menuTrim){
+    return menuTrim
+  }
+  return alert('Bitte gebe was ein!')
+}
+
+function getPriceFromInput() {
+  let priceInput = getValueFromInput("price");
+  let parsedPrice = parseFloat(priceInput);
+  if (isNaN(parsedPrice)) {
+    return null;
+  }
+  return parsedPrice;
+}
+
+function onAddMenu() {
+  let menu = getMenuFromInput();
+  let price = getPriceFromInput();
+  menus.push(menu);
+  prices.push(price);
+  amounts.push(1); 
+}
+
+function getMenuIndex(menu) {
+  return menus.indexOf(menu);
+}
