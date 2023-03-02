@@ -1,7 +1,7 @@
 
 /* ---generally--- */
 *{
-    font-size: 16px;
+    font-size: 10px;
     margin: 0;
     box-sizing: border-box;
 }
@@ -10,8 +10,12 @@ body{
     font-family: Arial,sans-serif;
 }
 
+h1{
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
 h2{
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
 }
 
 /* ---HEADER--- */
@@ -20,19 +24,17 @@ header{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    height: 70px;
-    width: 100vw;
+    height: auto;
     padding: 8px;
     background-color: orange;
     color: white;
-    box-shadow: rgba(255, 165, 0, 0.9) 0px 1px 5px 5px;
+    box-shadow: rgba(255, 165, 0, 0.5) 0px 1px 5px 5px;
     z-index: 500;
 }
 
 .header-section-l{
     cursor: pointer;
     width: 180px;
-    padding: 16px;
 }
 
 .header-section-l a{
@@ -43,31 +45,70 @@ header{
 }
 
 .header-section-l img{
-    width: clamp(45px, 10vw, 65px);
+    width: clamp(45px, 10vw, 55px);
     padding-right: 8%;
 }
 
 .header-section-r{
     width: 180px;
-    padding: 16px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:flex-end;
     align-items: center;
 }
 
 .header-section-r img{
-    padding: 6px;
-    width: clamp(30px, 7vw, 45px);
+    padding: 4px;
+    margin-left: 2vw;
+    width: clamp(25px, 7vw, 30px);
 }
 
 /* ---MAIN-CONTENT--- */
 
 .content-container{
-    width: 100vw;
     display: flex;
 }
 
 .main-content{
-    width: 72vw;
-    height: 220px;
+    width: 80vw;
+    height: 2500px;
+}
+
+.main-image{
+    height: 150px;
+    width: 100%;
+    object-fit:cover;
+    display: flex;
+}
+
+.basket-container{
+    width: 20vw;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 10px silver;
+    height: 100vh;
+    padding: 16px;
+    text-align: center;
+}
+
+.basket-container img{
+    margin-top: 70px;
+    margin-bottom: 16px;
+    width: 40px;
+}
+
+.company-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(221, 221, 221, 0.527);
+    position: absolute;
+    top: 165px;
+    left: 50px;
+}
+
+.company-icon img{
+    width: 80px;
 }
