@@ -1,105 +1,151 @@
-
 /* ---generally--- */
-*{
+* {
     font-size: 10px;
-    margin: 0;
+    /*  */
     box-sizing: border-box;
 }
 
-body{
-    font-family: Arial,sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-h1{
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+h1 {
+    font-size: clamp(1.5rem, 3vw, 2.0rem);
 }
 
-h2{
+h2 {
     font-size: clamp(1.1rem, 3vw, 1.3rem);
 }
 
 /* ---HEADER--- */
 
-header{
+header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     height: auto;
-    padding: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     background-color: orange;
     color: white;
-    box-shadow: rgba(255, 165, 0, 0.5) 0px 1px 5px 5px;
+    box-shadow: rgba(255, 166, 0, 0.514) 0px 2px 4px 1px;
     z-index: 500;
 }
 
-.header-section-l{
+.header-section-l {
     cursor: pointer;
     width: 180px;
 }
 
-.header-section-l a{
+.header-section-l a {
     display: flex;
     align-items: center;
     color: white;
     text-decoration: none;
 }
 
-.header-section-l img{
-    width: clamp(45px, 10vw, 55px);
+.header-section-l img {
+    width: clamp(40px, 10vw, 50px);
     padding-right: 8%;
 }
 
-.header-section-r{
+.header-section-r {
+
     width: 180px;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.header-section-r img{
-    padding: 4px;
+.header-section-r img {
     margin-left: 2vw;
     width: clamp(25px, 7vw, 30px);
 }
 
 /* ---MAIN-CONTENT--- */
 
-.content-container{
+.content-container {
     display: flex;
 }
 
-.main-content{
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80vw;
     height: 2500px;
 }
 
-.main-image{
-    height: 150px;
+.main-image {
+    height: clamp(80px, 20vw, 140px);
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
     display: flex;
 }
 
-.company-icon{
+.icon-bg {
+    width: 67px;
+    background-color: rgba(255, 255, 255, 0.349);
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 90px;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(221, 221, 221, 0.527);
-    position: absolute;
-    top: 165px;
-    left: 50px;
+    border-radius: 15px;
 }
 
-.company-icon img{
-    width: 80px;
+.company-icon {
+    position: absolute;
+    left: 30px;
+    top: clamp(94px, 23vw, 160px);
+    width: 100px;
 }
+
+.company-icon img {
+    width: 65px;
+}
+
+.Restaurant-info {
+    width: 100%;
+    padding: 30px;
+}
+
+.delivery-information {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.delivery-information img {
+    height: 16px;
+    width: 16px;
+}
+
+.delivery-information span {
+    padding-left: 4px;
+    padding-right: 8px;
+}
+
+/* ---Nav--- */
+
+nav .menuItems {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+nav .menuItems li a {
+    color: grey;
+    text-decoration: none;
+    font-size: 12px;
+}
+
 
 /* ---BASKET--- */
 
-.basket-container{
+.basket-container {
     width: 20vw;
     position: sticky;
     top: 0;
@@ -109,9 +155,8 @@ header{
     text-align: center;
 }
 
-.basket-container img{
+.basket-container img {
     margin-top: 70px;
     margin-bottom: 16px;
     width: 40px;
 }
-
