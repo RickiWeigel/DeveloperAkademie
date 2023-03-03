@@ -105,7 +105,7 @@ header {
     width: 65px;
 }
 
-.Restaurant-info {
+.restaurant-info {
     width: 100%;
     padding: 30px;
 }
@@ -127,27 +127,39 @@ header {
     padding-right: 8px;
 }
 
+/* ---Dishes--- */
+
+.dishes{
+
+}
+
+
 /* ---Nav--- */
+nav{
+    width: 100%;
+    background-color: grey;
+}
 
 nav .menuItems {
-    width: 50%;
     list-style: none;
     display: flex;
-    padding: 0;
-    justify-content: space-between;
+    padding-left: 30px;
 }
 
 nav .menuItems li a {
     padding: 6px 12px;
-    color: grey;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
     font-size: 14px;
     margin-right: 22px;
 }
 
 nav .menuItems li a:hover{
-    background-color: rgba(128, 128, 128, 0.1);
+    background-color: rgba(255, 166, 0, 0.7);
     border-radius: 45px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px;
+
 }
 
 nav .menuItems li a:focus{
