@@ -1,6 +1,6 @@
 /* ---generally--- */
 * {
-    font-size: 10px;
+    font-size: 14px;
     /*  */
     box-sizing: border-box;
 }
@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
 }
 
 /* ---HEADER--- */
@@ -97,7 +97,7 @@ header {
 .company-icon {
     position: absolute;
     left: 30px;
-    top: clamp(94px, 23vw, 160px);
+    top: clamp(110px, 25.5vw, 180px);
     width: 100px;
 }
 
@@ -130,6 +130,7 @@ header {
 /* ---Nav--- */
 
 nav .menuItems {
+    width: 50%;
     list-style: none;
     display: flex;
     padding: 0;
@@ -137,11 +138,22 @@ nav .menuItems {
 }
 
 nav .menuItems li a {
+    padding: 6px 12px;
     color: grey;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
+    margin-right: 22px;
 }
 
+nav .menuItems li a:hover{
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 45px;
+}
+
+nav .menuItems li a:focus{
+    background-color: rgba(128, 128, 128, 0.25);
+    border-radius: 45px;
+}
 
 /* ---BASKET--- */
 
