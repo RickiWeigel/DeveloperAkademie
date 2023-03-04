@@ -15,7 +15,11 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+}
+
+h3{
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 /* ---HEADER--- */
@@ -25,10 +29,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    padding-right: 16px;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 0px 8px;
     background-color: orange;
     color: white;
     box-shadow: rgba(255, 166, 0, 0.514) 0px 2px 4px 1px;
@@ -111,6 +112,7 @@ header {
 }
 
 .delivery-information {
+    color: rgb(102,102,102);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -130,7 +132,18 @@ header {
 /* ---Dishes--- */
 
 .dishes{
+    width: 100%;
+    background-color: #FCFCFC;
+    height: 100%;
+    padding: 0px 30px;
+}
 
+.dish{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    background-color: white;
 }
 
 
@@ -138,6 +151,8 @@ header {
 nav{
     width: 100%;
     background-color: grey;
+    box-shadow: rgb(0 0 0 / 49%) -1px 1px 3px;
+    margin-bottom: 6px;
 }
 
 nav .menuItems {
@@ -153,6 +168,8 @@ nav .menuItems li a {
     text-decoration: none;
     font-size: 14px;
     margin-right: 22px;
+    border-radius: 45px;
+    transition: background-color 0.4s;
 }
 
 nav .menuItems li a:hover{
