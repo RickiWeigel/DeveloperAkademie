@@ -184,6 +184,10 @@ header {
     background-color: #ffffff;
 }
 
+.dish-info{
+    padding-bottom: 16px;
+}
+
 
 /* ---Nav--- */
 nav{
