@@ -138,7 +138,7 @@ header {
     padding: 0px 30px;
 }
 
-.dish{
+.dish-container{
     border: 1px solid #ccc;
     border-radius: 10px;
     width: 100%;
