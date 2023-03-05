@@ -149,6 +149,7 @@ function singleValueDish(i) {
 }
 
 function priceAllDishes() {
+  sumTotal = 0;
   for (let i = 0; i < cart.length; i++) {
     sumTotal = cart[i].priceTotal + sumTotal;
   }
