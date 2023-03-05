@@ -5,7 +5,7 @@ let dishes = [
     dishName: "Pizza Margherita",
     dishInfo: "Wahl aus: Klein, ca. 24cm, Mittel, ca. 28cm, Groß, ca. 32cm.",
     dishPrice: 5.0,
-    counter: '+'
+    counter: "+",
   },
 
   {
@@ -35,7 +35,6 @@ let dishes = [
 
 function render() {
   renderDishes();
-
 }
 
 function renderDishes() {
@@ -62,9 +61,9 @@ function renderDishes() {
 
 function renderCart() {
   if (cart.length == 0) {
-    cartEmpty()
+    cartEmpty();
   } else {
-    cartFilled()
+    cartFilled();
   }
 }
 
@@ -79,39 +78,49 @@ function addToCart(i) {
   }
   document.getElementById("cart").innerHTML = "";
   renderCart();
-  addCounter(i);
+  RanderCounter(i);
 }
 
-
-
-function minOrder(){
-
+function subToCart(i) {
+  cart[i].counter--;
+  if (cart[i].counter === 0) {
+    cart.splice(i, 1);
+  }
+  document.getElementById("cart").innerHTML = "";
+  renderCart();
+  RanderCounter(i);
 }
 
-function addCounter(i){
-  document.getElementById(`dishCounter${i}`).innerHTML =``;
-  document.getElementById(`dishCounter${i}`).innerHTML = `
+function RanderCounter(i) {
+  if ((dishes[i].counter == 0)) {
+    document.getElementById(`dishCounter${i}`).innerHTML = `
+    <span>+</span>
+  `;
+  } else {
+    document.getElementById(`dishCounter${i}`).innerHTML = ``;
+    document.getElementById(`dishCounter${i}`).innerHTML = `
   <span>${dishes[i].counter}</span>
 `;
+  }
 }
 
-function cartEmpty(){
-  return document.getElementById("cart").innerHTML += `
+function cartEmpty() {
+  return (document.getElementById("cart").innerHTML += `
       <img src="./img/warenkorb.png">
       <h2>Fülle deinen Warenkorb</h2>
       <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
-  `;
+  `);
 }
 
-function cartFilled(){  
-    for (let i = 0; i < cart.length; i++) {
-      let formattedPrice = singleValueDish(i).toFixed(2).replace(".", ",");
-      document.getElementById("cart").innerHTML += `
+function cartFilled() {
+  for (let i = 0; i < cart.length; i++) {
+    let formattedPrice = singleValueDish(i).toFixed(2).replace(".", ",");
+    document.getElementById("cart").innerHTML += `
+      <div id=${i}>
       <div class="sektion-1">
           <div>
               <span><b>${cart[i].counter}</b></span>
           </div>
-
           <div class="cartNamePrice">
               <h4>${cart[i].dishName}</h4>
               <p>${formattedPrice}</p>
@@ -120,15 +129,16 @@ function cartFilled(){
       <div class="section-2">
           <span>Anmerkung hinzufügen</span>
           <div class="add-sub">
-              <div class="dish-counter">-</div>
+              <div class="dish-counter" onclick="subToCart(${i})">-</div>
               <div class="dish-counter" onclick="addToCart(${i})">+</div>
           </div>
       </div>
-      ` 
-    }
+      </div>
+      `;
+  }
 }
 
-function singleValueDish(i){
-  let singleValue = cart[i].counter * cart[i].dishPrice
-  return singleValue
+function singleValueDish(i) {
+  let singleValue = cart[i].counter * cart[i].dishPrice;
+  return singleValue;
 }
