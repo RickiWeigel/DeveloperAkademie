@@ -9,7 +9,7 @@
 
     <title></title>
 </head>
-<body onload="">
+<body onload="render()">
 
 <header>
     <div class="header-section-l">
@@ -48,10 +48,10 @@
             </ul>
         </nav>   
                              
-        <div class="dishes" id="dishes-card">
+        <div class="dishes">
             <h2>Beliebt</h2>
-            <div class="dish-container">
-                <div class="dish-name">
+            <div id="dishRander" >
+                <!-- <div class="dish-name" id="dishName">
                     <span>
                         Pizza Margherita
                     </span>
@@ -59,17 +59,17 @@
                 </div>
                 <div class="dish-info"><span>Wahl aus: Klein, ca. 24cm, Mittel, ca. 28cm, Groß, ca. 32cm.</span>
                 </div>
-                <div class="dish-price"><h3>5.00€</h3></div>
+                <div class="dish-price" id="dishPrice"><h3>5.00€</h3></div> -->
             </div>
         </div>
     </div>
-
-         <div class="basket-container">
-            <h1> Warenkorb</h1>
-            <img src="./img/warenkorb.png">
-            <h2>Fülle deinen Warenkorb</h2>
-            <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
-         </div>
+        <div class="basket-container" id="cart">
+                <!-- <h1> Warenkorb</h1>
+                <img src="./img/warenkorb.png">
+                <h2>Fülle deinen Warenkorb</h2>
+                <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p> -->
+        </div>
+         
          
     </div>
 </main>
