@@ -35,7 +35,7 @@ let dishes = [
 
 function render() {
   renderDishes();
-  renderCart();
+
 }
 
 function renderDishes() {
@@ -57,6 +57,7 @@ function renderDishes() {
       </div>
     `;
   }
+  renderCart();
 }
 
 function renderCart() {
@@ -107,7 +108,6 @@ function cartEmpty(){
 
 function cartFilled(){
   return document.getElementById(`cart`).innerHTML += `
-  <div class="basket-container">
   <h1> Warenkorb</h1>
   <div class="sektion-1">
       <div><span><b>+</b></span></div>
@@ -122,7 +122,6 @@ function cartFilled(){
           <div class="dish-counter">-</div>
           <div class="dish-counter" onclick="addToCart(i)">+</div>
       </div>
-  </div>
   </div>
   `;
 }
