@@ -79,12 +79,10 @@ function addToCart(i) {
   }
   document.getElementById("cart").innerHTML = "";
   renderCart();
-  addCounter(i)
+  addCounter(i);
 }
 
-function singleValueDish(){
 
-}
 
 function minOrder(){
 
@@ -99,29 +97,38 @@ function addCounter(i){
 
 function cartEmpty(){
   return document.getElementById("cart").innerHTML += `
-  <h1> Warenkorb</h1>
       <img src="./img/warenkorb.png">
       <h2>Fülle deinen Warenkorb</h2>
       <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
   `;
 }
 
-function cartFilled(){
-  return document.getElementById(`cart`).innerHTML += `
-  <h1> Warenkorb</h1>
-  <div class="sektion-1">
-      <div><span><b>+</b></span></div>
-      <div class="cartNamePrice">
-          <h4>Name Gericht</h4>
-          <p>5.00€</p>
+function cartFilled(){  
+    for (let i = 0; i < cart.length; i++) {
+      let formattedPrice = singleValueDish(i).toFixed(2).replace(".", ",");
+      document.getElementById("cart").innerHTML += `
+      <div class="sektion-1">
+          <div>
+              <span><b>${cart[i].counter}</b></span>
+          </div>
+
+          <div class="cartNamePrice">
+              <h4>${cart[i].dishName}</h4>
+              <p>${formattedPrice}</p>
+          </div>
       </div>
-  </div>
-  <div class="section-2">
-      <span>Anmerkung hinzufügen</span>
-      <div class="add-sub">
-          <div class="dish-counter">-</div>
-          <div class="dish-counter" onclick="addToCart(i)">+</div>
+      <div class="section-2">
+          <span>Anmerkung hinzufügen</span>
+          <div class="add-sub">
+              <div class="dish-counter">-</div>
+              <div class="dish-counter" onclick="addToCart(${i})">+</div>
+          </div>
       </div>
-  </div>
-  `;
+      ` 
+    }
+}
+
+function singleValueDish(i){
+  let singleValue = cart[i].counter * cart[i].dishPrice
+  return singleValue
 }
