@@ -5,6 +5,7 @@ let dishes = [
     dishName: "Pizza Margherita",
     dishInfo: "Wahl aus: Klein, ca. 24cm, Mittel, ca. 28cm, Groß, ca. 32cm.",
     dishPrice: 5.0,
+    counter: '+'
   },
 
   {
@@ -23,7 +24,6 @@ let dishes = [
     dishName: "Pizza Hawai",
     dishInfo: "Wahl aus: Klein, ca. 24cm, Mittel, ca. 28cm, Groß, ca. 32cm.",
     dishPrice: 6.5,
-    counter: 1,
   },
 
   {
@@ -45,7 +45,7 @@ function renderDishes() {
       <div class="dish-container" id=dish${i} onclick="addToCart(${i})">
         <div class="dish-name">
           <span> ${dishes[i].dishName} </span>
-          <div class="dish-counter">
+          <div class="dish-counter" id="dishCounter${i}">
             <span>+</span>
           </div>
         </div>
@@ -61,18 +61,9 @@ function renderDishes() {
 
 function renderCart() {
   if (cart.length == 0) {
-    document.getElementById("cart").innerHTML += `
-            <h1> Warenkorb</h1>
-                <img src="./img/warenkorb.png">
-                <h2>Fülle deinen Warenkorb</h2>
-                <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
-            `;
+    cartEmpty()
   } else {
-    document.getElementById("cart").innerHTML += `
-            <h1>Warenkorb</h1>
-                <h2>TEEEST</h2>
-                <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
-            `;
+    cartFilled()
   }
 }
 
@@ -87,4 +78,51 @@ function addToCart(i) {
   }
   document.getElementById("cart").innerHTML = "";
   renderCart();
+  addCounter(i)
+}
+
+function singleValueDish(){
+
+}
+
+function minOrder(){
+
+}
+
+function addCounter(i){
+  document.getElementById(`dishCounter${i}`).innerHTML =``;
+  document.getElementById(`dishCounter${i}`).innerHTML = `
+  <span>${dishes[i].counter}</span>
+`;
+}
+
+function cartEmpty(){
+  return document.getElementById("cart").innerHTML += `
+  <h1> Warenkorb</h1>
+      <img src="./img/warenkorb.png">
+      <h2>Fülle deinen Warenkorb</h2>
+      <p>Füge einige leckere Gerichte aus der Speißekarte hinzu und bestelle dein Essen.</p>
+  `;
+}
+
+function cartFilled(){
+  return document.getElementById(`cart`).innerHTML += `
+  <div class="basket-container">
+  <h1> Warenkorb</h1>
+  <div class="sektion-1">
+      <div><span><b>+</b></span></div>
+      <div class="cartNamePrice">
+          <h4>Name Gericht</h4>
+          <p>5.00€</p>
+      </div>
+  </div>
+  <div class="section-2">
+      <span>Anmerkung hinzufügen</span>
+      <div class="add-sub">
+          <div class="dish-counter">-</div>
+          <div class="dish-counter" onclick="addToCart(i)">+</div>
+      </div>
+  </div>
+  </div>
+  `;
 }
