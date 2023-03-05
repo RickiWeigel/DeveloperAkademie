@@ -1,3 +1,5 @@
+let singleValue;
+let sumTotal = 0;
 let cart = [];
 
 let dishes = [
@@ -79,6 +81,7 @@ function addToCart(i) {
   document.getElementById("cart").innerHTML = "";
   renderCart();
   RanderCounter(i);
+  priceAllDishes();
 }
 
 function subToCart(i) {
@@ -89,6 +92,7 @@ function subToCart(i) {
   document.getElementById("cart").innerHTML = "";
   renderCart();
   RanderCounter(i);
+  priceAllDishes();
 }
 
 function RanderCounter(i) {
@@ -139,6 +143,13 @@ function cartFilled() {
 }
 
 function singleValueDish(i) {
-  let singleValue = cart[i].counter * cart[i].dishPrice;
+  singleValue = cart[i].counter * cart[i].dishPrice;
+  cart[i].priceTotal = singleValue;
   return singleValue;
+}
+
+function priceAllDishes() {
+  for (let i = 0; i < cart.length; i++) {
+    sumTotal = cart[i].priceTotal + sumTotal;
+  }
 }
