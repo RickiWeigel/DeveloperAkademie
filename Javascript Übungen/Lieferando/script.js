@@ -1,5 +1,6 @@
 let singleValue;
 let sumTotal = 0;
+
 let cart = [];
 
 let dishes = [
@@ -71,7 +72,7 @@ function renderCart() {
 
 function addToCart(i) {
   let dish = dishes[i];
-  let index = cart.indexOf(dishes[i]);
+  let index = cart.indexOf(dish);
   if (index == -1) {
     dish.counter = 1;
     cart.push(dish);
@@ -82,6 +83,7 @@ function addToCart(i) {
   renderCart();
   RanderCounter(i);
   priceAllDishes();
+  costs(i);  
 }
 
 function subToCart(i) {
@@ -93,10 +95,11 @@ function subToCart(i) {
   renderCart();
   RanderCounter(i);
   priceAllDishes();
+  costs(i)
 }
 
 function RanderCounter(i) {
-  if ((dishes[i].counter == 0)) {
+  if (dishes[i].counter == 0) {
     document.getElementById(`dishCounter${i}`).innerHTML = `
     <span>+</span>
   `;
@@ -121,24 +124,24 @@ function cartFilled() {
     let formattedPrice = singleValueDish(i).toFixed(2).replace(".", ",");
     document.getElementById("cart").innerHTML += `
       <div id=${i}>
-      <div class="sektion-1">
+        <div class="sektion-1">
           <div>
-              <span><b>${cart[i].counter}</b></span>
+            <span><b>${cart[i].counter}</b></span>
           </div>
           <div class="cartNamePrice">
-              <h4>${cart[i].dishName}</h4>
-              <p>${formattedPrice}</p>
+            <h4>${cart[i].dishName}</h4>
+            <p>${formattedPrice} €</p>
           </div>
-      </div>
-      <div class="section-2">
+        </div>
+        <div class="section-2">
           <span>Anmerkung hinzufügen</span>
           <div class="add-sub">
-              <div class="dish-counter" onclick="subToCart(${i})">-</div>
-              <div class="dish-counter" onclick="addToCart(${i})">+</div>
+            <div class="dish-counter" onclick="subToCart(${i})">-</div>
+            <div class="dish-counter" onclick="addToCart(${i})">+</div>
           </div>
+        </div>
       </div>
-      </div>
-      `;
+    `;
   }
 }
 
@@ -152,5 +155,29 @@ function priceAllDishes() {
   sumTotal = 0;
   for (let i = 0; i < cart.length; i++) {
     sumTotal = cart[i].priceTotal + sumTotal;
+  }
+}
+
+function costs() {
+  let formattedPrice = sumTotal.toFixed(2).replace(".", ",");
+  if (cart.length == 0) {
+    document.getElementById("calc").innerHTML = ``;
+  } else {
+    document.getElementById("calc").innerHTML = `
+    <div class="calc" id="calc">
+      <div class="costs">
+        <span>Zwischensumme</span>
+        <span>${formattedPrice}</span>
+      </div>
+      <div class="costs">
+        <span>Lieferkosten</span>
+        <span>kostenlos</span>
+      </div>
+      <div class="costs">
+        <div><b>Gesamt</b></div>
+        <div><b>${formattedPrice} €</b></div>
+      </div>
+    </div>
+    `;
   }
 }

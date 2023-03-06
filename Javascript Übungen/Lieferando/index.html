@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 
     <title></title>
-</head>
-<body onload="render()">
+  </head>
 
-<header>
-    <div class="header-section-l">
-        <a href="./index.html"><img src="./img/lieferlogo.png"><h3>LieferFix</h3></a>
-    </div>
-    
-    <h3>Speisekarte</h3>
+  <body onload="render()">
+    <header>
+      <div class="header-section-l">
+        <a href="./index.html"
+          ><img src="./img/lieferlogo.png" />
+          <h3>LieferFix</h3>
+        </a>
+      </div>
+      <h3>Speisekarte</h3>
+      <div class="header-section-r">
+        <img src="./img/germany.png" onclick="" />
+        <img src="./img/menutaste.png" />
+      </div>
+    </header>
 
-    <div class="header-section-r">
-        <img src="./img/germany.png" onclick="">
-        <img src="./img/menutaste.png">
-    </div>
-</header>
-
-<main>
-    <div class="content-container">
+    <main>
+      <div class="content-container">
         <div class="main-content">
-            <img class=main-image src="./img/pizza.jpg" alt="">
-            <div class="company-icon"><div class="icon-bg"><img src="./img/pizza-logo.png"></div></div>
-            <div class="restaurant-info">
-                <h1>Fixpizza</h1>
-                <div class="delivery-information">
-                    <img src="./img/uhr.png"><span>35-60 min</span>
-                    <img src="./img/lieferwagen.png"><span>kostenlos</span>
-                    <img src="./img/warenkorb.png"><span>min. 8,00€</span>
-                </div>
-
+          <img class="main-image" src="./img/pizza.jpg" alt="" />
+          <div class="company-icon">
+            <div class="icon-bg"><img src="./img/pizza-logo.png" /></div>
+          </div>
+          <div class="restaurant-info">
+            <h1>Fixpizza</h1>
+            <div class="delivery-information">
+              <img src="./img/uhr.png" /><span>35-60 min</span>
+              <img src="./img/lieferwagen.png" /><span>kostenlos</span>
+              <img src="./img/warenkorb.png" /><span>min. 8,00€</span>
             </div>
-        <nav>
+          </div>
+          <nav>
             <ul class="menuItems">
-                <li ><a href='index.html'>Beliebt</a></li>
-                <li><a href='index.html'>Pizza</a></li>
-                <li><a href='#'>Salat</a></li>
-                <li><a href='#'>Dessert</a></li>
-                <li><a href='#'>Getränke</a></li>
+              <li><a href="index.html">Beliebt</a></li>
+              <li><a href="index.html">Pizza</a></li>
+              <li><a href="#">Salat</a></li>
+              <li><a href="#">Dessert</a></li>
+              <li><a href="#">Getränke</a></li>
             </ul>
-        </nav>   
-                             
-        <div class="dishes">
-            <h2>Beliebt</h2>
-            <div id="dishRander" >
-            </div>
-        </div>
-    </div>
-        <div class="basket-container">
-             <h1> Warenkorb</h1>
-             <div id="cart"></div>
-        </div>
-         
-         
-    </div>
-</main>
+          </nav>
 
-   
-</body>
+          <div class="dishes">
+            <h2>Beliebt</h2>
+            <div id="dishRander"></div>
+          </div>
+        </div>
+
+        <div class="basket-container">
+          <h1>Warenkorb</h1>
+          <div id="cart"></div>
+          <div id="calc"></div>
+          <button class="btn" onclick=""><span><b>Bezahlen</b></span></button>
+        </div>
+        
+
+      </div>
+    </main>
+  </body>
 </html>
